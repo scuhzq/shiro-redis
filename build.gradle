@@ -1,5 +1,5 @@
 group 'org.zunpeng'
-version '0.0.1'
+version '0.1.0'
 
 apply plugin: 'java'
 apply plugin: 'maven'
@@ -35,6 +35,9 @@ dependencies {
     compile("org.apache.shiro:shiro-spring:$shiroVersion")
 
     compile("org.springframework.data:spring-data-redis:1.7.2.RELEASE")
+    compile ("javax.servlet:javax.servlet-api:3.1.0")
+
+    compile("com.alibaba:fastjson:1.2.7")
 
     compile("org.slf4j:slf4j-api:$slf4jVersion")
     compile("org.slf4j:jcl-over-slf4j:$slf4jVersion")
@@ -44,6 +47,7 @@ dependencies {
     compile("ch.qos.logback:logback-core:$logbackVersion")
 
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile("org.easymock:easymock:3.1")
 }
 
 /**************************************************************/
